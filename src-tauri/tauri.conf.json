@@ -1,6 +1,7 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
+    "withGlobalTauri": true,
     "beforeBuildCommand": "",
     "beforeDevCommand": "",
     "devPath": "../dist",
@@ -12,11 +13,13 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "dialog": {
+        "message": true
+      }
     },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
+      "category": "Productivity",
       "copyright": "",
       "deb": {
         "depends": []
@@ -29,8 +32,8 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
-      "longDescription": "",
+      "identifier": "com.colla.rs",
+      "longDescription": "The Colla.rs client; because Rust safety should apply to sex toys too, right? right..?",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
@@ -39,7 +42,7 @@
         "signingIdentity": null
       },
       "resources": [],
-      "shortDescription": "",
+      "shortDescription": "The Colla.rs client; because Rust safety should apply to sex toys too, right? right..?",
       "targets": "all",
       "windows": {
         "certificateThumbprint": null,

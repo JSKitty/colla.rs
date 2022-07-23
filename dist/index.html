@@ -4,6 +4,23 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>colla.rs</h1>
+    <button onclick="setServer()">Set Server</button>
+    <br><br>
+    <h2 id="status"></h2>
+        <form>
+            <h3 style="margin: 15px;">Mode:</h3> <select name="toyMode" id="toyMode" style="width: 100%; height: 5vw;">
+                <option value="zappy">Shock</option>
+                <option value="vibey">Vibrate</option>
+                <option value="beep">Beep</option>
+                <option value="led">LED</option>
+            </select>
+            <br>
+            <h3 id="toyLevelTitle" style="margin: 15px;">Strength:</h3> <input type="range" id="toyLevel" name="toyLevel" min="5" max="50" step="5" value="10" style="width:100%; height: 5vw;">
+            <br>
+            <h3 id="toyDurationTitle" style="margin: 15px;">Duration:</h3> <input type="range" id="toyDuration" name="toyDuration" min="200" max="10000" step="100" value="300" style="width:100%; height: 5vw;">
+            <br>
+        </form>
+        <input type="button" style="width: 100%; height: 25%;" onclick="execute()" value="Play on Collar" />
+    <script src="./main.js"></script>
   </body>
 </html>
